@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Organização De Evento</title>
+</head>
+<body>
+    <div id="body">
+        <header>
+            <div class="logo">
+                <img src="imagens/Logo-Uninga-Alta.png" alt="Logo da Organização de Evento">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Dúvidas</a></li>
+                    <li><a href="#">Uningá</a></li>
+                    <li><a href="#">QRCODE</a></li>
+                </ul>
+            </nav>
+            <a href="#" aria-label="Botão para a administração" class="contact-button">Área Administrativa</a>
+        </header>
+        <main>
+            <div class="main-container">
+                <div class="container">
+                    <div>
+                        <h1>Venha participar dos<br> <span class="text-gradient-2">eventos UNINGÁ</span></h1>
+                    </div>
+                    <div class="div1">
+                        <h2>Inscreva-se em uma experiência única! Faça seu cadastro agora para os eventos de excelência na prestigiada Universidade de Maringá e garanta seu lugar no mundo do conhecimento.</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <p>Escolha o evento e faça a sua inscrição!</p>
+                    <form action="/z.php" id="l1" method="post">
+                        <input type="text" id="nome" name="nome" class="nome" placeholder="Nome do participante" required>
+                        <br>
+                        <input type="email" id="email" name="email" class="email" placeholder="E-mail" required>
+                        <br>
+                        <input type="tel" name="tel" id="tel" class="tel" placeholder="Tel: (00) 90000-0000" required/><br>
+                        <button type="submit" class="button b1">
+                          <span>Fazer Inscrição</span>
+                        </button>
+                      </form>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div id="cookie-notice" class="cookie-banner">
+            <p id="texto2">Usamos cookies para que sua experiência seja melhor e ao continuar navegando, você está ciente </p>
+            <br>
+            <button id="cn-accept-cookie" onclick="aceitarCookies()">Aceitar</button>
+            <button id="cn-decline-cookie" onclick="recusarCookies()">Recusar</button>
+            </div>
+            <script>function aceitarCookies() {
+                // Define um cookie com o nome 'cookie-aceito' e o valor 'true' por 30 dias
+                document.cookie = 'cookie-aceito=true;expires=' + new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
+                // Oculta o aviso de cookie
+                document.getElementById('cookie-notice').style.display = 'none';
+              }
+            
+              function recusarCookies() {
+                // Define um cookie com o nome 'cookie-recusado' e o valor 'true' por 30 dias
+                document.cookie = 'cookie-recusado=true;expires=' + new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
+                // Oculta o aviso de cookie
+                document.getElementById('cookie-notice').style.display = 'none';
+                // Você pode adicionar aqui código adicional para lidar com a recusa de cookies, se necessário
+              }
+            
+              // Verifica se o cookie 'cookie-aceito' existe quando a página é carregada
+              if (document.cookie.indexOf('cookie-aceito=true') > -1) {
+                // Oculta o aviso de cookie
+                document.getElementById('cookie-notice').style.display = 'none';
+              }</script>
+    </footer>
+</body>
+
+</html>
